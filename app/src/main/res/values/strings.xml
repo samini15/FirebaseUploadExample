@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Firebase Upload Example</string>
+    <string name="enter_file_name">Enter file name</string>
+    <string name="choose_file">CHOOSE FILE</string>
+    <string name="upload">UPLOAD</string>
+    <string name="show_uploads">show uploads</string>
+</resources>

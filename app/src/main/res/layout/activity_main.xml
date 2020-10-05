@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_toEndOf="@id/button_choose_image"
+        android:hint="@string/enter_file_name">
+
+        <EditText
+            android:id="@+id/edit_text_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_blue_button"
+        android:layout_margin="@dimen/margin_average"
+        android:text="@string/choose_file"
+        android:padding="@dimen/padding_normal" />
+
+    <ImageView
+        android:id="@+id/image_view_upload_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/progress_bar"
+        android:layout_below="@id/til_filename"
+        android:layout_margin="@dimen/margin_normal" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_upload"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/margin_normal"/>
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload"
+        android:padding="@dimen/padding_normal"
+        android:background="@drawable/custom_outline_green_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_normal"
+        />
+
+    <TextView
+        android:id="@+id/text_view_show_uploads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_uploads"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="@dimen/text_average"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@id/button_upload"
+        android:layout_toEndOf="@id/button_upload"
+        android:layout_marginStart="@dimen/margin_average"/>
+
+
+</RelativeLayout>
